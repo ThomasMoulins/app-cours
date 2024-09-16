@@ -1,4 +1,4 @@
-function Formation(props) {
+function Project(props) {
     return (
       <div className="card">
         <h3>{props.data.title}</h3>
@@ -8,5 +8,5 @@ function Formation(props) {
     );
   }
   
-  export default Formation;
+  export default Project;
   

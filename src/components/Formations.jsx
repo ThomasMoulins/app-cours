@@ -1,6 +1,6 @@
 import Formation from "./Formation"
 
-function Formations(props) {
+function Formations() {
   let firstEntreprise = {
     title: 'HTML',
     date: '2000 - 2001',
@@ -15,6 +15,7 @@ function Formations(props) {
 
   return (
     <>
+        <h1>Formations</h1>
         <Formation data={firstEntreprise} />
         <Formation data={secondEntreprise} />
     </>

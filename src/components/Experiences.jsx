@@ -1,6 +1,6 @@
 import Experience from "./Experience"
 
-function Experiences(props) {
+function Experiences() {
   let firstEntreprise = {
     title: 'Développeur Web',
     company: 'Entreprise A',
@@ -17,6 +17,7 @@ function Experiences(props) {
 
   return (
     <>
+        <h1>Expériences</h1>
         <Experience data={firstEntreprise} />
         <Experience data={secondEntreprise} />
     </>
