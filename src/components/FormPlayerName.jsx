@@ -5,7 +5,8 @@ function FormPlayerName() {
 
   return (
     <>
-      <label>Player name</label>
+      <h2>{name}</h2>
+      <label>Player name : </label>
       <input
         name="name"
         type="text"
