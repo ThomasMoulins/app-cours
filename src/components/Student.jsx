@@ -1,10 +1,10 @@
-function Student(props) {
+const Student = ({name, lastName, avatar, campus, devLanguage, isFromRi7}) => {
   return (
     <div className="card">
-        <h3>{props.data.name} {props.data.lastName}</h3>
-        <img src={props.data.avatar}/>
-        <p>{props.data.campus} : {props.data.devLanguage}</p>
-        {props.data.isFromRi7 ? <button onClick={() => alert('Bonjour je m\'appelle')}>ICI</button> : null}
+        <h3>{name} {lastName}</h3>
+        <img src={avatar}/>
+        <p>{campus} : {devLanguage}</p>
+        {isFromRi7 ? <button onClick={() => alert(`Bonjour je m'appelle ${name}`)}>ICI</button> : null}
     </div>
   )
 }

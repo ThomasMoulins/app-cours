@@ -7,7 +7,7 @@ function App() {
   let firstStudent = {
     name: 'Jean',
     lastName: 'pasmoi',
-    avatar: Logo, // Utiliser directement l'image importée
+    avatar: Logo,
     campus: 'RI7',
     devLanguage: 'Flutter',
     isFromRi7: true
@@ -16,7 +16,7 @@ function App() {
   let secondStudent = {
     name: 'jiji',
     lastName: 'here',
-    avatar: Avatar, // Utiliser directement l'image importée
+    avatar: Avatar,
     campus: 'Nextech',
     devLanguage: 'React.js',
     isFromRi7: false
@@ -24,8 +24,8 @@ function App() {
 
   return (
     <>
-      <Student data={firstStudent} />
-      <Student data={secondStudent} />
+      <Student {...firstStudent} />
+      <Student {...secondStudent} />
     </>
   );
 }
