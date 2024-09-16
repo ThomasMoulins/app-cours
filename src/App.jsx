@@ -1,9 +1,9 @@
 import './App.css'
 import Avatar from './components/Avatar';
-import Experiences from './components/Experiences';
-import Formations from './components/Formations';
+import Experiences from './components/Experiences/Experiences';
+import Formations from './components/Formations/Formations';
 import Identity from './components/Identity';
-import Projects from './components/Projects';
+import Projects from './components/Projects/Projects';
 import Icon from './assets/react.svg'
 
 function App() {
