@@ -16,8 +16,10 @@ function Projects() {
   return (
     <>
         <h1>Projects</h1>
-        <Project data={firstProject} />
-        <Project data={secondProject} />
+        <div className="student-card">
+          <Project data={firstProject} />
+          <Project data={secondProject} />
+        </div>
     </>
   )
 }

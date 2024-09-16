@@ -1,8 +1,7 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -34,9 +33,39 @@
 }
 
 .card {
-  padding: 2em;
+  width: 40%;
+  padding: 1em;
+  margin-right: 1rem;
+  border-style: solid;
+  border-color: white;
+  border-radius: 25px;
+
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.student-card {
+  display: flex;
+  align-items: center; /* Aligner verticalement l'image et le texte */
+}
+
+.avatar {
+  width: 10rem; /* Ajustez la taille selon vos besoins */
+  margin-right: 5rem; /* Espacement entre l'image et le texte */
+  padding: 1rem;
+  border-style: solid;
+  border-color: white;
+  border-radius: 25%;
+}
+
+h1 {
+  color: rgb(224, 146, 29);
+  text-decoration: underline;
+}
+
+h2 {
+  color: darkcyan;
+  margin-right: 1em;
 }

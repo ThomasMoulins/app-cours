@@ -16,8 +16,10 @@ function Formations() {
   return (
     <>
         <h1>Formations</h1>
-        <Formation data={firstEntreprise} />
-        <Formation data={secondEntreprise} />
+        <div className="student-card">
+          <Formation data={firstEntreprise} />
+          <Formation data={secondEntreprise} />
+        </div>
     </>
   )
 }

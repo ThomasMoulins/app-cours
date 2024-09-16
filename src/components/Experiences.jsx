@@ -18,8 +18,10 @@ function Experiences() {
   return (
     <>
         <h1>Expériences</h1>
-        <Experience data={firstEntreprise} />
-        <Experience data={secondEntreprise} />
+        <div className="student-card">
+          <Experience data={firstEntreprise} />
+          <Experience data={secondEntreprise} />
+        </div>
     </>
   )
 }

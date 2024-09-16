@@ -9,8 +9,10 @@ import Icon from './assets/react.svg'
 function App() {
   return (
     <>
-      <Identity name='me' lastName='ornot' addresse='50 rue imaginaire'/>
-      <Avatar avatar={Icon}/>
+      <div className="student-card">
+        <Avatar avatar={Icon}/>
+        <Identity name='Jean' lastName='DELACOURS' age='95 ans'/>
+      </div>
       <Experiences />
       <Formations />
       <Projects />
