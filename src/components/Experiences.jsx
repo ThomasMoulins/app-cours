@@ -1,8 +1,24 @@
+import Experience from "./Experience"
+
 function Experiences(props) {
+  let firstEntreprise = {
+    title: 'Développeur Web',
+    company: 'Entreprise A',
+    date: '2020 - 2022',
+    description: 'Développement de sites web.' 
+  }
+
+  let secondEntreprise = {
+    title: 'Designer UI',
+    company: 'Entreprise B',
+    date: '2018 - 2020',
+    description: 'Conception d’interfaces utilisateurs.' 
+  }
+
   return (
     <>
-        <h2>{props.titre}</h2>
-        <h3>{props.description}</h3>
+        <Experience data={firstEntreprise} />
+        <Experience data={secondEntreprise} />
     </>
   )
 }

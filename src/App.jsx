@@ -1,16 +1,19 @@
 import './App.css'
+import Avatar from './components/Avatar';
+import Experiences from './components/Experiences';
+import Formations from './components/Formations';
+import Identity from './components/Identity';
+import Projects from './components/Projects';
+import Icon from './assets/react.svg'
 
 function App() {
-  let name = 'Jean';
-
   return (
     <>
-      <div>
-        <h1>Hello Ri7, je m’appelle { name }</h1>
-      </div>
-      <div>
-      
-      </div>
+      <Identity name='me' lastName='ornot' addresse='50 rue imaginaire'/>
+      <Avatar avatar={Icon}/>
+      <Experiences />
+      <Formations />
+      <Projects />
     </>
   )
 }
