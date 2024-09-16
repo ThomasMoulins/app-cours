@@ -4,28 +4,10 @@ import Logo from './assets/react.svg';
 import Avatar from '../public/vite.svg';
 
 function App() {
-  let firstStudent = {
-    name: 'Jean',
-    lastName: 'pasmoi',
-    avatar: Logo,
-    campus: 'RI7',
-    devLanguage: 'Flutter',
-    isFromRi7: true
-  };
-
-  let secondStudent = {
-    name: 'jiji',
-    lastName: 'here',
-    avatar: Avatar,
-    campus: 'Nextech',
-    devLanguage: 'React.js',
-    isFromRi7: false
-  };
-
   return (
     <>
-      <Student {...firstStudent} />
-      <Student {...secondStudent} />
+      <Student name='Jean' lastName='pasmoi' avatar={Logo} campus='RI7' devLanguage='JS' isFromRi7/>
+      <Student name='jiji' lastName='here' avatar={Avatar} campus='Nextech' devLanguage='React.js'/>
     </>
   );
 }
