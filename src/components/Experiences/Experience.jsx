@@ -1,9 +1,9 @@
-function Experience(props) {
+const Experience = ({title, company, date, description}) => {
   return (
     <div className="card">
-      <h3>{props.data.title} - {props.data.company}</h3>
-      <p>{props.data.date}</p>
-      <p>{props.data.description}</p>
+      <h3>{title} - {company}</h3>
+      <p>{date}</p>
+      <p>{description}</p>
     </div>
   );
 }

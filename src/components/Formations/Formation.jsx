@@ -1,9 +1,9 @@
-function Formation(props) {
+const Formation = ({title, date, description}) => {
     return (
       <div className="card">
-        <h3>{props.data.title}</h3>
-        <p>{props.data.date}</p>
-        <p>{props.data.description}</p>
+        <h3>{title}</h3>
+        <p>{date}</p>
+        <p>{description}</p>
       </div>
     );
   }
