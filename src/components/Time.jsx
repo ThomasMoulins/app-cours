@@ -9,7 +9,7 @@ const Time = () => {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  });
+  }, []);
 
   const formatTime = (date) => {
     const hours = String(date.getHours()).padStart(2, '0');
