@@ -4,8 +4,8 @@ import FilmList from './components/FilmList'
 function App() {
   return (
     <>
-    <FilmList title='Popular Movies' link='https://api.themoviedb.org/3/movie/popular?language=fr&page=1'/>
-    <FilmList title='Top rated Movies' link='https://api.themoviedb.org/3/movie/top_rated?language=fr&page=1'/>
+    <FilmList title='Films Populaire' link='https://api.themoviedb.org/3/movie/popular?language=fr&page=1'/>
+    <FilmList title='Films les mieux notée' link='https://api.themoviedb.org/3/movie/top_rated?language=fr&page=1'/>
     </>
   )
 }
