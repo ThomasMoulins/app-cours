@@ -10,7 +10,7 @@ const FilmList = () => {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: <ConfToken />
+      Authorization: `Bearer ${ConfToken.API_TOKEN}`
     }
   };
 
