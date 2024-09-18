@@ -1,0 +1,15 @@
+li {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 2rem;
+}
+
+img {
+    max-width: 5rem;
+    margin-right: 1rem;
+}
+
+.Right {
+    transform: scaleX(-1); /* Flips the image horizontally */
+}
