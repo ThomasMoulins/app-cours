@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  text-align: start;
+  text-align: center;
 }
 
 .logo {
@@ -43,4 +43,16 @@
 
 li {
   list-style-type: none;
+  margin: 0.4rem;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 100px;
+}
+
+p {
+  margin: 0;
 }
