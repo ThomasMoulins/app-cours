@@ -1,9 +1,9 @@
 import './App.css'
-import FilmList from './components/FilmList'
+import Router from './components/Router'
 
 function App() {
   return (
-    <FilmList />
+    <Router />
   )
 }
 
