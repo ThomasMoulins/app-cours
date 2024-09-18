@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import ConfToken from './ConfToken';
+import Film from './Film';
 
-const FilmList = () => {
+const FilmList = ({title, link}) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [films, setFilms] = useState([]);
+  const navigate = useNavigate();
+  
 
   const options = {
     method: 'GET',
@@ -15,19 +19,25 @@ const FilmList = () => {
   };
 
   useEffect(() => {
-    fetch("https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc", options)
-    .then(res => res.json())
-    .then(
-        (result) => {
-            console.log(result);
-            setIsLoaded(true);
-            setFilms(result.results);
-        },
-        (error) => {
-            setIsLoaded(true);
-            setError(error);
-        }
-    )
+    const token = sessionStorage.getItem('authToken');
+
+    if (!token) {
+      navigate('/login');
+    } else {
+      fetch(link, options)
+      .then(res => res.json())
+      .then(
+          (result) => {
+              console.log(result);
+              setIsLoaded(true);
+              setFilms(result.results);
+          },
+          (error) => {
+              setIsLoaded(true);
+              setError(error);
+          }
+      )
+    }
   }, [])
 
   if(error) {
@@ -36,15 +46,14 @@ const FilmList = () => {
     return <div>Chargement...</div>
   } else {
     return(
-        <ul>
-            {films.map(film =>(
-                <li key={film.id}>
-                    {film.title}
-                </li>
-            ))}
-        </ul>
+        <>
+          <h1>{title}</h1>
+         <Film films={films}/>
+        </>
     )
   }
 }
+
+FilmList.propTypes = String
 
 export default FilmList

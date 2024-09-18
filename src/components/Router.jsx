@@ -2,7 +2,6 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Register from './Register'
 import Home from './Home'
 import Login from './Login'
-import FilmList from './FilmList'
 
 const Router = () => {
   return (
@@ -11,7 +10,7 @@ const Router = () => {
             <Route path='/' element={<Home />}/>
             <Route path='/register' element={<Register />}/>
             <Route path='/login' element={<Login />}/>
-            <Route path='/filmlist' element={<FilmList />}/>
+            <Route path='/home' element={<Home />}/>
         </Routes>
     </BrowserRouter>
   )

@@ -1,11 +1,11 @@
-import React from 'react'
+import FilmList from './FilmList'
 
 const Home = () => {
   return (
-    <header>
-        <a href='/register'>Register</a>
-        <a href='/login'>Login</a>
-    </header>
+    <>
+      <FilmList title='Films Populaire' link='https://api.themoviedb.org/3/movie/popular?language=fr&page=1'/>
+      <FilmList title='Films les mieux notée' link='https://api.themoviedb.org/3/movie/top_rated?language=fr&page=1'/>
+    </>
   )
 }
 
