@@ -1,21 +1,26 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Provider } from "react-router-dom"
 import Login from "./Login"
 import Quotes from './Quotes/Quotes'
-import Quote from './Quotes/Quote'
+import PrivateRoutes from "./PrivateRoutes"
+import { useContext } from "react"
+
+const { parent : { selectedParent } } = useContext(DataStoreContect);
 
 const Router = () => {
   return (
     <BrowserRouter>
-        <Routes>
+      <Provider value={DataStoreContect}>
+        <Routes> 
             {/* PUBLIC ROUTES */}
             <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             {/* PRIVATE ROUTES */}
             <Route element={<PrivateRoutes />}>
                 <Route path="/quotes" element={<Quotes />} />
-                <Route path="/quote" element={<Quote />} />
+                <Route path="/quotedetail/:id" element={<QuoteDetail user={selectedParent}/>} />
             </Route>
         </Routes>
+      </Provider>
     </BrowserRouter>
   )
 }
