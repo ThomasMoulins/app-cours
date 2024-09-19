@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Quote from './Quote';
+import { MyContext } from '../AppContext';
 
 const Quotes = () => {
+  const { store, setStore } = useContext(MyContext)
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
-  const [quotes, setQuotes] = useState([]);
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -20,7 +21,7 @@ const Quotes = () => {
       (result) => {
         console.log(result);
         setIsLoaded(true);
-        setQuotes(result)
+        setStore({...store, apiData: result});
       },
       (error) => {
         setIsLoaded(true);
@@ -37,9 +38,9 @@ const Quotes = () => {
   } else {
     return(
         <>
-          <button onClick={handleClick}>Se Déconnecter</button>
+          <button onClick={handleClick}>Se Déconnecter de {store.username}</button>
           <h1>Quotes</h1>
-          <Quote quotes={quotes}/>
+          <Quote quotes={store.apiData}/>
         </>
     )
   }
