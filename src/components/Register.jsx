@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -49,7 +49,7 @@ const Register = () => {
         {error && <p style={{color: 'red'}}>{error}</p>}
         <button type="submit">S'inscrire</button>
       </form>
-      <a href='/login'>Se Connecter</a>
+      <Link to='/login'>Se Connecter</Link>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ConfToken from './ConfToken';
 
 const Login = () => {
@@ -67,7 +67,7 @@ const Login = () => {
         {error && <p style={{color: 'red'}}>{error}</p>}
         <button type="submit">Se connecter</button>
       </form>
-      <a href='/register'>S'inscrire</a>
+      <Link to='/register'>S'inscrire</Link>
     </div>
   );
 };
