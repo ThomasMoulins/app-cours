@@ -31,7 +31,7 @@ const Login = () => {
           (result) => {
               console.log(result);
               sessionStorage.setItem('authToken', result.request_token);
-              navigate('/home');
+              navigate('/');
           },
           (error) => {
               setError(error);

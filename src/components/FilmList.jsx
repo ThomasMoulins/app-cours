@@ -8,6 +8,11 @@ const FilmList = ({title, link}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [films, setFilms] = useState([]);
   const navigate = useNavigate();
+
+  const handleClick = () => {
+    sessionStorage.clear();
+    navigate('/login');
+  };
   
 
   const options = {
@@ -47,8 +52,9 @@ const FilmList = ({title, link}) => {
   } else {
     return(
         <>
+          <button onClick={handleClick}>Se Déconnecter</button>
           <h1>{title}</h1>
-         <Film films={films}/>
+          <Film films={films}/>
         </>
     )
   }
