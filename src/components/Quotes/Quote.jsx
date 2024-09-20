@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import './Quotes.css'
 
 const Img = styled.img`
   max-width: 5rem;
@@ -15,13 +14,17 @@ const Li = styled.li `
   margin: 2rem;
 `
 
+const Name = styled.strong `
+  font-family: 'Simpsonfont';
+`
+
 const Quote = ({quotes}) => {
   return (
     <ul>
       {quotes.map((quote, index) => (
         <Li key={index}>
           <Link to={`/quotedetail/${quote.character}`}><Img direction={quote.characterDirection} src={quote.image}/></Link>
-          <p><strong>{quote.character}:</strong> {quote.quote}</p>
+          <p><Name>{quote.character}</Name> - {quote.quote}</p>
         </Li>
       ))}
     </ul>

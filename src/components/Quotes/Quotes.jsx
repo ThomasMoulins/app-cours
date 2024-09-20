@@ -2,6 +2,11 @@ import { useState, useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Quote from './Quote';
 import { MyContext } from '../AppContext';
+import styled from 'styled-components';
+
+const Title = styled.h1 `
+  font-family: 'Simpsonfont';
+`
 
 const Quotes = () => {
   const { store, setStore } = useContext(MyContext)
@@ -39,7 +44,7 @@ const Quotes = () => {
     return(
         <>
           <button onClick={handleClick}>Se Déconnecter de {store.username}</button>
-          <h1>Quotes</h1>
+          <Title>Citations Simpsons</Title>
           <Quote quotes={store.apiData}/>
         </>
     )

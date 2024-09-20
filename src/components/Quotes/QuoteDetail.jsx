@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from 'react-router-dom';
 import Quote from "./Quote";
+import styled from "styled-components";
+
+const Title = styled.h1 `
+  font-family: 'Simpsonfont';
+`
 
 const QuoteDetail = () => {
 
@@ -40,7 +45,7 @@ const QuoteDetail = () => {
     return(
         <>
           <button onClick={handleClick}>Retour vers les Quotes</button>
-          <h1>Quotes for {character}</h1>
+          <Title>Citations de {character}</Title>
           <Quote quotes={quotes}/>
         </>
     )
